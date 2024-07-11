@@ -13,6 +13,8 @@ struct GlissinatorWidget : bp::BaconModuleWidget
 
 GlissinatorWidget::GlissinatorWidget(GlissinatorWidget::G *model)
 {
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Glissinator.svg")));
+
     setModule(model);
     box.size = Vec(SCREW_WIDTH * 5, RACK_HEIGHT);
     BaconBackground *bg = new BaconBackground(box.size, "Glissinator");

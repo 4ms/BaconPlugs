@@ -265,6 +265,8 @@ struct LuckyHoldWidget : bp::BaconModuleWidget
 
 LuckyHoldWidget::LuckyHoldWidget(LuckyHold *m) : bp::BaconModuleWidget()
 {
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/LuckyHold.svg")));
+
     setModule(m);
     box.size = Vec(SCREW_WIDTH * 9, RACK_HEIGHT);
 

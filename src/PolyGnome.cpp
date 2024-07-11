@@ -22,6 +22,8 @@ struct PolyGnomeWidget : bp::BaconModuleWidget
 
 PolyGnomeWidget::PolyGnomeWidget(PolyGnomeWidget::M *module)
 {
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/PolyGnome.svg")));
+
     setModule(module);
     box.size = Vec(SCREW_WIDTH * 16, RACK_HEIGHT);
 

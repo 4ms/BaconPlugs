@@ -128,6 +128,8 @@ struct ChipNoiseWidget : bp::BaconModuleWidget
 
 ChipNoiseWidget::ChipNoiseWidget(ChipNoise *module)
 {
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/ChipNoise.svg")));
+
     setModule(module);
     box.size = Vec(SCREW_WIDTH * 6, RACK_HEIGHT);
 

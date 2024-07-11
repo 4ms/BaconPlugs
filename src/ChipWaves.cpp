@@ -121,6 +121,8 @@ struct ChipWavesWidget : bp::BaconModuleWidget
 
 ChipWavesWidget::ChipWavesWidget(ChipWaves *module)
 {
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/ChipWaves.svg")));
+
     setModule(module);
     box.size = Vec(SCREW_WIDTH * 6, RACK_HEIGHT);
 

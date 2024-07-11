@@ -28,6 +28,8 @@ struct PolyGeneratorWidget : baconpaul::rackplugs::BaconModuleWidget
 
 PolyGeneratorWidget::PolyGeneratorWidget(PolyGenerator *model)
 {
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/PolyGenerator.svg")));
+
     setModule(model);
     box.size = Vec(SCREW_WIDTH * 9, RACK_HEIGHT);
     BaconBackground *bg = new BaconBackground(box.size, "PolyGenerator");

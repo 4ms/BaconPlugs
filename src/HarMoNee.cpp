@@ -243,6 +243,8 @@ struct HarMoNeeWidget : bp::BaconModuleWidget
 
 HarMoNeeWidget::HarMoNeeWidget(HarMoNee *model)
 {
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/HarMoNee.svg")));
+
     setModule(model);
     box.size = Vec(SCREW_WIDTH * 8, RACK_HEIGHT);
 

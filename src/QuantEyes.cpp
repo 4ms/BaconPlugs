@@ -183,6 +183,8 @@ struct QuantEyesWidget : bp::BaconModuleWidget
 
 QuantEyesWidget::QuantEyesWidget(QuantEyes *model) : bp::BaconModuleWidget()
 {
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/QuantEyes.svg")));
+
     setModule(model);
     box.size = Vec(SCREW_WIDTH * 12, RACK_HEIGHT);
 

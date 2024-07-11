@@ -15,6 +15,8 @@ struct SampleDelayWidget : bp::BaconModuleWidget
 
 SampleDelayWidget::SampleDelayWidget(SD *module)
 {
+    setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/SampleDelay.svg")));
+
     setModule(module);
     box.size = Vec(SCREW_WIDTH * 3, RACK_HEIGHT);
 
