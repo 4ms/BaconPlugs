@@ -8,7 +8,7 @@
 
 namespace bp = baconpaul::rackplugs;
 
-struct QuantEyes : virtual bp::BaconModule
+struct QuantEyes : bp::BaconModule
 {
     enum ParamIds
     {

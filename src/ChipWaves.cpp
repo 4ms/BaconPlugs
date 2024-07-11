@@ -10,8 +10,7 @@
 
 namespace bp = baconpaul::rackplugs;
 
-struct ChipWaves : virtual bp::BaconModule,
-                   sst::rackhelpers::module_connector::NeighborConnectable_V1
+struct ChipWaves : bp::BaconModule, sst::rackhelpers::module_connector::NeighborConnectable_V1
 
 {
     enum ParamIds

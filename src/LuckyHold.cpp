@@ -8,7 +8,7 @@
 
 namespace bp = baconpaul::rackplugs;
 
-struct LuckyHold : virtual bp::BaconModule
+struct LuckyHold : bp::BaconModule
 {
     enum ParamIds
     {

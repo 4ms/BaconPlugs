@@ -3,7 +3,7 @@
 #include <iostream>
 #define NUM_CLOCKS 5
 
-template <typename TBase> struct PolyGnome : virtual TBase
+template <typename TBase> struct PolyGnome : TBase
 {
     enum ParamIds
     {

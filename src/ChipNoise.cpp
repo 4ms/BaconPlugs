@@ -8,8 +8,7 @@
 
 namespace bp = baconpaul::rackplugs;
 
-struct ChipNoise : virtual bp::BaconModule,
-                   sst::rackhelpers::module_connector::NeighborConnectable_V1
+struct ChipNoise : bp::BaconModule, sst::rackhelpers::module_connector::NeighborConnectable_V1
 {
     enum ParamIds
     {

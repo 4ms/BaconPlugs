@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <vector>
 
-template <typename TBase> struct SampleDelay : virtual TBase
+template <typename TBase> struct SampleDelay : TBase
 {
     enum ParamIds
     {
