@@ -318,7 +318,7 @@ struct BaconBackground : virtual TransparentWidget, baconpaul::rackplugs::StyleP
                                       baconpaul::rackplugs::BaconStyle::Colors fill);
     BaconBackground *addRoundedBorder(Vec pos, Vec sz, NVGcolor fill)
     {
-        std::cout << "ERROR" << std::endl;
+        // std::cout << "ERROR" << std::endl;
         return this;
     }
 
@@ -386,10 +386,10 @@ struct BaconHelpButton : public SvgButton
 
     void onAction(const event::Action &e) override
     {
-        std::thread t([/*this*/]() {
-            // systemOpenBrowser(url.c_str() );
-        });
-        t.detach();
+        // std::thread t([/*this*/]() {
+        //     // systemOpenBrowser(url.c_str() );
+        // });
+        // t.detach();
     }
 };
 
@@ -789,8 +789,9 @@ struct DynamicLabel : virtual TransparentWidget, baconpaul::rackplugs::StylePart
 
 struct CBButton : rack::Widget, baconpaul::rackplugs::StyleParticipant
 {
-    std::function<std::string()> getLabel = []() {  return "Label"; };
-    std::function<void()> onPressed = []() { std::cout << "Pressed; No Callback" << std::endl; };
+    std::function<std::string()> getLabel = []() { return "Label"; };
+    std::function<void()> onPressed =
+        []() { /*std::cout << "Pressed; No Callback" << std::endl;*/ };
     BufferedDrawFunctionWidget *bdw{nullptr};
     std::string label{""};
     CBButton(const rack::Vec &pos, const rack::Vec &sz)
